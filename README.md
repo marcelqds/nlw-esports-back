@@ -23,6 +23,11 @@
 ```bash
    npm install @prisma/client
 ```
+- [x] cors
+```bash
+   npm install cors
+   npm install -D @types/cors
+```
 
 ## Entidades
 
@@ -49,6 +54,6 @@
 - Listagem de anúncios por game
 - Buscar discord pelo `id` do anúncio
 
-/* npx prisma studio 
-    npx prisma migrate diff | dev 
-*/
+<!-- npx prisma studio 
+npx prisma migrate diff | dev -->
+
