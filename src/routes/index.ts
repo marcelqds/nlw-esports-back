@@ -1,16 +1,10 @@
-import { Router } from 'express';
+import express, { Router } from 'express';
+import { adsRouter } from './ads.routes';
+import { gameRouter } from './game.routes';
 
 const routes = Router();
-let anuncios = [
-    {id : "1", name: "Anúncio 1"},
-    {id : "2", name: "Anúncio 2"},
-    {id : "3", name: "Anúncio 3"},
-    {id : "4", name: "Anúncio 4"},
-];
-routes.get('/ads', (request, response) => {
-    response.json(anuncios);
-});
 
-export {
-    routes
-}
+routes.use('/ads', adsRouter);
+routes.use('/game', gameRouter);
+
+export { routes }
